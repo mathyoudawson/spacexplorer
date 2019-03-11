@@ -1,0 +1,14 @@
+<% @launches.each do |launch| %>
+  <h1><%= launch["mission_name"] %></h1>
+  <h2><%= launch["launch_date_utc"] %></h2>
+  <ul>Links: </ul>
+  <% launch["links"].each do |key, value| %>
+    <% if key == "flickr_images" %>
+      <% value.each do |image| %>
+        <a href="<%= image %>">Image</a>
+      <% end %>
+    <% else %>
+      <li><a href="<%= value %>"><%= key %></a></li>
+    <% end %>
+  <% end %>
+<% end %>
