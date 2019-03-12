@@ -4,16 +4,16 @@ class LaunchesController < ApplicationController
   end
 
   def show
-    @launch = api_client.one_launch(launch_params)
+    @launch = api_client.one_launch(params[:id])
   end
 
   private
 
   def launch_params
-    params.require(@params).permit(:id)
+    params.require(:id).permit!
   end
 
   def api_client
-    @client ||= SpacexApi::V3::Client.new
+    SpacexApi::V3::Client.new
   end
 end
