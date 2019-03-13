@@ -1,6 +1,6 @@
 class LaunchesController < ApplicationController
   def index
-    @launches = api_client.all_launches
+    @launches = api_client.all_launches(:limit => 10)
   end
 
   def show

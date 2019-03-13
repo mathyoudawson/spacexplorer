@@ -3,10 +3,10 @@ module SpacexApi
     class Client
       API_ENDPOINT = 'https://api.spacexdata.com/v3'.freeze
 
-      def all_launches
+      def all_launches(limit:)
         request(
           http_method: :get,
-          endpoint: "launches"
+          endpoint: "launches?limit=#{limit}"
         )
       end
 
