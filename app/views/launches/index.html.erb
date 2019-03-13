@@ -1,5 +1,5 @@
 <% @launches.each do |launch| %>
-  <h1><%= launch["mission_name"] %></h1>
+  <h1><%= link_to launch["mission_name"], launch_path(launch["flight_number"]) %></h1>
   <h2><%= launch["launch_date_utc"] %></h2>
   <ul>Links: </ul>
   <% launch["links"].each do |key, value| %>
