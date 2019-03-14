@@ -1,0 +1,2 @@
+module NextLaunchHelper
+end

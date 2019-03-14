@@ -17,6 +17,13 @@ module SpacexApi
         )
       end
 
+      def next_launch
+        request(
+          http_method: :get,
+          endpoint: "launches/next",
+        )
+      end
+
       private
 
       def client
