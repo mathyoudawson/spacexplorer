@@ -1,11 +1,11 @@
 <h1>Next SpaceX launch is: <%= @launch["launch_date_local"] %></h1>
 <h2><%= @launch["mission_name"] %></h2>
 <h2>Rocket: <%= @launch["rocket"]["rocket_name"] %></h2>
-<h2>First Stage: <%= @launch["rocket"]["first_stage"]["cores"].each do |core| %>
-  <h3>Core serial: <%= core["core_serial"] %></h3>
-  <h3>Intent to land?: <%= core["landing_intent"] %></h3>
+<h2>First Stage: <% @launch["rocket"]["first_stage"]["cores"].each do |core| %></h2>
+  <p>Core serial: <%= core["core_serial"] %></p>
+  <p>Intent to land?: <%= core["landing_intent"] %></p>
 <% end %>
-<h2>Second Stage/Payload: <%= @launch["rocket"]["second_stage"]["payloads"].each do |payload| %></h2>
+<h2>Second Stage/Payload: <% @launch["rocket"]["second_stage"]["payloads"].each do |payload| %></h2>
   <p><%= payload["payload_id"] %></p>
   <p>Customer: <%= payload["customers"].first %></p>
   <p>Payload type: <%= payload["payload_type"] %></p>
