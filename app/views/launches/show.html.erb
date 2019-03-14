@@ -1,5 +1,15 @@
   <h1><%= @launch["mission_name"] %></h1>
-  <h2><%= @launch["launch_date_utc"] %></h2>
+  <h2>Launched on: <%= @launch["launch_date_utc"] %></h2>
+  <h3>Details: <%= @launch["details"] %></h3>
+  <a href=<%= @launch["telemetry"]["flight_club"] %>>Telemetry Data</a>
+  <h3> Launch Site: <%= @launch["launch_site"]["site_name_long"] %></h3>
+  <div class="time-line">
+    <ul>Time Line</ul>
+      <% @launch["timeline"].each do |key, value| %>
+        <li><%= key %>: <%= value %></li>
+      <% end %>
+    </ul>
+  </div>  
   <ul>Links: </ul>
   <% @launch["links"].each do |key, value| %>
     <li><a href="<%= value %>"><%= key %></a></li>
