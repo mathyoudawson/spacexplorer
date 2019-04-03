@@ -31,8 +31,14 @@ header {
   display: flex;
   padding: 1em;
   align-items: baseline;
+  justify-content: center;
   a, a:visited {
   color: #FFC30C;
-  font-size: 2em;
+  font-size: 1.5em;
   }
+}
+
+#header-title {
+  margin-left: 1em;
+  margin-right: 1em;
 }
