@@ -1,3 +1,4 @@
+<div class="container">
   <h1><%= @launch["mission_name"] %></h1>
   <h2>Launched on: <%= @launch["launch_date_utc"] %></h2>
   <h3>Details: <%= @launch["details"] %></h3>
@@ -14,3 +15,4 @@
   <% @launch["links"].each do |key, value| %>
     <li><a href="<%= value %>"><%= key %></a></li>
   <% end %>
+</div>

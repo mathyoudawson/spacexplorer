@@ -1,12 +1,14 @@
 <% @launches.each do |launch| %>
-  <h1><%= link_to launch["mission_name"], launch_path(launch["flight_number"]) %></h1>
-  <h2>Launched on: <%= launch["launch_date_utc"] %></h2>
-  <h3>Rocket: <%= launch["rocket"]["rocket_name"] %></h3>
-  <h3>Launch Site: <%= launch["launch_site"]["site_name_long"] %>
-  <% if launch["launch_success"] %>
-    <p>Launch Succeeded</p>
-  <% else %>
-    <p> Launch Failed</p>
+  <div class="container">
+    <h1><%= link_to launch["mission_name"], launch_path(launch["flight_number"]) %></h1>
+    <h2>Launched on: <%= launch["launch_date_utc"] %></h2>
+    <h3>Rocket: <%= launch["rocket"]["rocket_name"] %></h3>
+    <h3>Launch Site: <%= launch["launch_site"]["site_name_long"] %>
+    <% if launch["launch_success"] %>
+      <p>Launch Succeeded</p>
+    <% else %>
+      <p> Launch Failed</p>
+    <% end %>
+    <p><%= launch["details"] %></p>
+  </div>
   <% end %>
-  <p><%= launch["details"] %></p>
-<% end %>
