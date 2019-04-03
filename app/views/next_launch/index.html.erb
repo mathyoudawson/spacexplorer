@@ -1,3 +1,4 @@
+<div class="container">
 <h1>Next SpaceX launch <%= formatted_launch_time(@launch["launch_date_local"]) %></h1>
 <h2><%= time_until_launch(@launch["launch_date_local"]) %> until launch.</h2>
 <h2><%= @launch["mission_name"] %></h2>
@@ -12,4 +13,4 @@
   <p>Payload type: <%= payload["payload_type"] %></p>
   <p>Payload mass: <%= payload["payload_mass_kg"] %> Kgs</p>
 <% end %>
-
+</div>
