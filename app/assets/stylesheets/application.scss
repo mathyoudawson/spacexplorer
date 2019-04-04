@@ -13,30 +13,37 @@
  *= require_tree .
  *= require_self
  */
+$font-stack: 'Lato', sans-serif;
+$primary-blue: #0D1D3E;
+$highlight-orange: #F16622;
+$highlight-yellow: #FFC30C;
+$primary-white: #f2f4f7;
+
+
 body {
   background-color: #0D1D3E;
   font-family: 'Lato', sans-serif;
 }
 
 .container {
-  border: 5px solid #F16622;
-  background-color: #f2f4f7;
+  border: 5px solid $highlight-orange;
+  background-color: $primary-white;
   margin-left: 5%;
   margin-right: 5%;
   margin-top: 2%;
   padding: 2em;
-  color: #0D1D3E;
+  color: $primary-blue;
 }
 
 header {
-  color: #FFC30C;
+  color: $highlight-yellow;
   display: flex;
   padding: 1em;
   align-items: baseline;
   justify-content: center;
   a, a:visited {
-  color: #FFC30C;
-  font-size: 1.5em;
+    color: $highlight-yellow;
+    font-size: 1.5em;
   }
 }
 
